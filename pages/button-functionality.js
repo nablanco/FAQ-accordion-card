@@ -6,5 +6,18 @@ const questionList = {
    5: [ "Do you provide additional support?", "Chat and email support is available 24/7. Phone lines are open during normal business hours."]
 }
 
+const btnList = []
+const btn1 = document.querySelector(".button-1");
+const btn2 = document.querySelector(".button-2");
+const btn3 = document.querySelector(".button-3");
+const btn4 = document.querySelector(".button-4");
+const btn5 = document.querySelector(".button-5");
 
-const btn = document.querySelector(".dropdown-toggle");
+btn1.addEventListener("click", printButtonClass(btn1))
+
+btn2.addEventListener("click", printButtonClass(btn2))
+
+
+function printButtonClass (btn) {
+   console.log(btn.className);
+}
