@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <script src="./button-functionality.js" defer></script>
+    <link rel="stylesheet" href="./../styles/styles.css">
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./../images/favicon-32x32.png"
     />
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
@@ -19,9 +21,25 @@
   </head>
   <body>
     <div class="component">
-      
+      <div class="image-container">
+        <img class="box-img" href="../images/illustration-box-desktop.svg" alt="floating box">
+        <img class="mobile-woman-img" href="../images/illustration-woman-online-mobile.svg" alt="illustratio of a woman online">
+        <img class="desktop-woman-img" href="../images/illustration-woman-online-desktop.svg" alt="illustratio of a woman online">
+      </div>
+      <div class="faq-container">
+        <h1>FAQ</h1>
+
+        <div class="question-container">
+          <button class="question button-1">How many team members can I invite?</button>
+          <p class="answer first-answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+        </div>
+
+        <div class="question-container">
+          <button class="question   button-2">What is the maximum file upload size?</button>
+          <p class="answer second-answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </div>
+      </div>
     </div>
- 
 
     <div class="attribution">
       Challenge by
