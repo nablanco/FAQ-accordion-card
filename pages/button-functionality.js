@@ -7,17 +7,17 @@ const questionList = {
 }
 
 const btnList = []
-const btn1 = document.querySelector(".button-1");
+const btn1 = document.querySelector(".question");
 const btn2 = document.querySelector(".button-2");
 const btn3 = document.querySelector(".button-3");
 const btn4 = document.querySelector(".button-4");
 const btn5 = document.querySelector(".button-5");
 
-btn1.addEventListener("click", printButtonClass(btn1));
+btn1.addEventListener("click", printButtonClass);
 
-btn2.addEventListener("click", printButtonClass(btn2));
+// btn2.addEventListener("click", printButtonClass(btn2));
 
 
-function printButtonClass (btn) {
-   console.log(btn.className);
+function printButtonClass (event) {
+   console.log(event.target.className);
 }

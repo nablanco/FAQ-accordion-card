@@ -5,16 +5,16 @@
 }
 
 body {
-  display: flex;
-  flex-flow: column nowrap;
+  background: linear-gradient(120deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  /* background-color: purple; */
+}
+
+.app {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background: linear-gradient(45deg, hsl(273, 75%, 66%), hsl(273, 75%, 66%)); */
-  background-color: purple;
 }
-
 .component {
   display: flex;
   flex-flow: column nowrap;
