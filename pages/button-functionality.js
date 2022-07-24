@@ -6,18 +6,47 @@ const questionList = {
    5: [ "Do you provide additional support?", "Chat and email support is available 24/7. Phone lines are open during normal business hours."]
 }
 
-const btnList = []
-const btn1 = document.querySelector(".question");
-const btn2 = document.querySelector(".button-2");
-const btn3 = document.querySelector(".button-3");
-const btn4 = document.querySelector(".button-4");
-const btn5 = document.querySelector(".button-5");
+const btns = document.querySelectorAll("button.question");
+const paragraphs = document.querySelectorAll("p.answer");
+const arrows = document.querySelectorAll("div.icon-arrow");
 
-btn1.addEventListener("click", printButtonClass);
+let btnStatus = ["closed","closed","closed","closed","closed"]
 
-// btn2.addEventListener("click", printButtonClass(btn2));
+// console.log(btns[0].classList)
+// console.log(paragraphs[0].classList)
 
+btns.forEach((btn, i) => {
+   btn.addEventListener("click", (event) => {
+      if (btnStatus[i] === "open") {
+         paragraphs[i].classList.remove("open");
+         paragraphs[i].classList.add("closed");
 
-function printButtonClass (event) {
-   console.log(event.target.className);
-}
+         arrows[i].classList.remove("open");
+         arrows[i].classList.add("closed");
+
+         btnStatus.forEach((el, i) => btnStatus[i] = "closed");
+      } else {
+         paragraphs[i].classList.remove("closed");
+         paragraphs[i].classList.add("open");
+
+         arrows[i].classList.remove("closed");
+         arrows[i].classList.add("open");
+
+         let openButtonIndex = btnStatus.indexOf('open');
+         console.log(openButtonIndex);
+
+         if (openButtonIndex >= 0) {
+            console.log("")
+            paragraphs[openButtonIndex].classList.remove("open");
+            paragraphs[openButtonIndex].classList.add("closed");
+   
+            arrows[openButtonIndex].classList.remove("open");
+            arrows[openButtonIndex].classList.add("closed");
+         };
+
+         btnStatus.forEach((el ,i) => btnStatus[i] = "closed");
+         btnStatus[i] = "open";
+      };
+      console.log("Updated button status list: " + btnStatus)
+   })
+})
