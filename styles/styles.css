@@ -13,6 +13,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin: 0px;
 }
 
 /* Parent component basic style/layout */
@@ -34,12 +35,20 @@ body {
   height: 100px;
 }
 
-img {
+.mobile-img {
   position: fixed;
   left: 10%;
   bottom: 82%;
   width: 80%;
   filter: drop-shadow(0px 30px 0.5px hsl(240, 5%, 91%))
+}
+
+.desktop-img {
+  display: none;
+}
+
+.box-img {
+  display: none;
 }
 
 /* FAQ conatiner */
@@ -83,7 +92,9 @@ h1 {
 .answer {
   color: hsl(238, 29%, 16%);
   font-size: 12px;
+  min-height: 55px;
 }
+
 .answer.closed {
   display: none;
 }
@@ -117,7 +128,64 @@ h1 {
 
 /* Media query for desktop layout >= 1000px */
 @media screen and (min-width: 1000px) {
+
+  /* Parent component basic style/layout */
   .component {
     flex-flow: row nowrap;
+    width: 750px;
+    min-height: 100%;
+  }
+  
+  /* Image container */
+  .img-container {
+    display: block;
+    position: relative;
+    flex-basis: 50%;
+    min-height: 291.88px;
+    }
+  
+  .box-img {
+    display: block;
+    position: absolute;
+    width: 32%;
+    left: -15.5%;
+    bottom: 26%;
+    z-index: 2;
+  }
+
+  .desktop-img-container {
+    display: block;
+    min-height: 291.88px;
+    line-height: 0;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+  }
+  
+  .desktop-img {
+    display: block;
+    position: absolute;
+    width: 85%;
+    left: -13.5%;
+    bottom: 13%;
+    filter: drop-shadow(0px 30px 0.5px hsl(240, 5%, 91%));
+  }
+  
+  .mobile-img {
+  display: none;
+  }
+
+  /* Question/answer container */
+  .faq-container {
+    flex-basis: 50%;
+    padding-right: 75px;
+  }
+
+  .question-container {
+    margin: 10px 0px;
+  }
+
+  h1 {
+    text-align: left;
   }
 }
