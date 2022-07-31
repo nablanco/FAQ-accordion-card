@@ -1,6 +1,6 @@
-# Frontend Mentor - Product preview card component solution
+# Frontend Mentor - FAQ accordion card solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -10,48 +10,47 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
-
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-Build out a product preview card component and get it to look as close as possible to the design preview and style-guide.
-
-Important note: I followed the intstructions literally, and so the webpage link below will only work at the specified 375px and 1440px. In the future, I will have the component change from vertical to horizontal at a screen width in-between the two.
 ### The challenge
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size:
-  - Mobile: width = 375px
-  - Desktop: width = 1440px
-- See hover and focus states for interactive elements
+- View the optimal layout for the component depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Hide/Show the answer to a question when the question is clicked
 
 ### Screenshot
 
-![](./images/screenshot.JPG)
+![](./design/Finished-desktop-design.png)
 
 ### Links
 
-- Solution URL: https://nablanco.github.io/product-preview-card/pages/index.html
-- Solution Repo: https://github.com/nablanco/product-preview-card
+- Solution URL: [Add solution URL here](https://nablanco.github.io/FAQ-accordion-card/pages/index.html)
 
 ## My process
-
-- Building out HTML to determine overall structure.
-  - Create parent component which will hold image and story divs
-  - Add mobile and desktop images to image div
-  - Organize story div with approriate text elements
-- Build out style sheet.  
-
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Flex
-- Mobile-first workflow
+- Javascript
+
+### What I learned
+
+The crux of this project was centered around the functionality of the buttons. To ensure a satisfying user experience, the the response to each question is only shown when the user clicks on the button. Additionaly, if any other response is shown when click anther question, that first response is closed. This was solved by storing the state of every button.
+
+### Continued development
+
+In the next project, my primary focus will be to leverage React.js library to create a component based app, progressing my front-end knowledge into more modern technologies. Given this will be my first React.js project, I will work on a simple component to ensure I grasp the fundamentals before pushing for more advanced projects.
+
 
 ## Author
 
