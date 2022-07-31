@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://nablanco.github.io/FAQ-accordion-card/pages/index.html)
+- Solution URL: [FAQ Accordion Card](https://nablanco.github.io/FAQ-accordion-card/pages/index.html)
 
 ## My process
 
